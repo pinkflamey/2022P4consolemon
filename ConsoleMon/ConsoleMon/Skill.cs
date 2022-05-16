@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleMon;
 
 namespace ConsoleMon
 {
@@ -11,6 +12,7 @@ namespace ConsoleMon
         internal int damage;
         internal int energyCost;
         internal string name;
+        internal Elements element;
 
         internal void UseOn(ConsoleMon target, ConsoleMon caster)
         {
