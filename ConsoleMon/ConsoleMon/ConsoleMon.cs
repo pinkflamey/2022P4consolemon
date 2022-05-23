@@ -21,7 +21,24 @@ namespace ConsoleMon
         internal string name;
         internal Elements weakness;
 
-        
+        internal ConsoleMon()
+        {
+
+        }
+
+        internal ConsoleMon(ConsoleMon copyFrom)
+        {
+            this.health = copyFrom.health;
+            this.energy = copyFrom.energy;
+            this.name = copyFrom.name;
+            this.weakness = copyFrom.weakness;
+
+            for (int i = 0; i < copyFrom.skills.Count; i++)
+            {
+                Skill clone = new Skill(copyFrom.skills[i]);
+                this.skills.Add(clone);
+            }
+        }
 
         List<Skill> skills = new List<Skill>();
 

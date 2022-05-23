@@ -14,6 +14,19 @@ namespace ConsoleMon
         internal string name;
         internal Elements element;
 
+        internal Skill()
+        {
+
+        }
+
+        internal Skill(Skill copyFrom)
+        {
+            this.damage = copyFrom.damage;
+            this.energyCost = copyFrom.energyCost;
+            this.name = copyFrom.name;
+            this.element = copyFrom.element;
+        }
+
         internal void UseOn(ConsoleMon target, ConsoleMon caster)
         {
             caster.DepleteEnergy(energyCost);
